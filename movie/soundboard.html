@@ -1,0 +1,355 @@
+<!--
+⢰⠒⠒⠒⠒⠋⠛⠉⠉⣷⡎⠉⠉⢹⣦⠀⢸⡁⠈⢹⣧⡠⠚⠉⠀⠀⠀⠈⠑⢦⡄⣿⠀⠀⢹⣧⢀⡴⠊⠉⠀⠀⠈⠓⢤⣄⠀⣾⠉⠉⠑⣦⡀⠀⣶⠒⠒⣦⡀
+⢸⡀⠀⠀⣤⣤⣤⣶⣶⣿⡇⠀⠀⢸⣿⠀⢸⠀⠀⢸⣿⡇⠀⠀⢾⣿⣿⣦⣾⣿⠏⡇⠀⠀⢸⣿⡏⠀⠀⣰⣶⣶⡦⠀⠀⢻⣧⡏⠀⠀⠀⠘⢿⣄⣿⠀⢀⣿⡇
+⠸⡇⠀⠀⠛⠛⠛⢻⣍⠁⡇⠀⠀⢸⣿⡀⢸⡇⠀⢸⣿⢧⡀⠀⠀⠀⠉⠉⠙⢦⣄⡇⠀⠀⢸⣿⠀⠀⠀⣿⡏⠀⢠⠀⠀⠀⣿⡇⠀⠀⡀⠀⠈⢻⣿⠀⢸⣿⡇
+⠀⡇⠀⠀⢠⣤⣤⣼⣿⠀⣧⠀⠀⢸⣿⡇⢸⡇⠀⢸⣿⢈⣻⣶⣶⣦⣤⠀⠀⠈⣿⡇⠀⠀⢸⣿⡀⠀⠀⣿⡇⠀⣤⠀⠀⢀⣿⣧⠀⠀⣿⣄⠀⠀⠀⠀⢸⣿⠁
+⠀⡇⠀⠀⢸⣿⠋⠉⠁⠀⠹⡂⠀⠀⠙⠓⠋⠁⢀⣼⣿⡉⠀⠉⠓⠛⠋⠀⠀⣰⣿⡟⠀⠀⢸⣿⢣⡀⠀⠈⠛⠚⠁⠀⣠⣾⣿⣿⠀⢰⣿⠛⣦⠀⠀⠀⢸⣿⠀
+⠀⣧⣀⣀⣸⣿⠀⠀⠀⠀⠀⠙⢶⣤⣤⣤⣤⣴⣿⡿⠃⠙⢷⣦⣤⣤⣤⣶⣿⡿⠋⢧⣤⣤⣾⡿⠈⠻⢶⣤⣤⣤⣤⣾⣿⠟⠑⣿⣤⣼⣿⠀⠈⢷⣀⣀⣸⣿⠀
+⠀⠈⠛⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠙⠛⠛⠃⠀
+⠀⠀⢀⡤⠒⠋⠉⠉⠒⠢⣄⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⡠⠤⣄⠀⡠⠖⠋⠉⠉⠉⠑⣦⡄⠀⠀
+⠀⢠⠋⠀⠀⢠⣴⣦⡀⠀⠈⣿⡄⠀⠀⡸⠁⠀⠀⠉⣷⡄⠀⢠⠉⠉⠉⠉⠙⣦⡀⣰⠉⠉⠉⠉⢹⣾⠉⠁⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⣠⣶⣶⣦⣼⣿⠇⠀⠀
+⠀⡏⠀⠀⠀⣿⣟⣉⠣⣤⣤⣼⡷⠀⡰⠃⠀⡀⠀⠀⢸⣧⠀⢸⠀⠀⠀⠀⠀⢹⣧⠃⠀⠀⠀⠀⢸⣿⠀⠀⠀⢦⣾⣿⣿⠿⠟⢇⠀⠀⠈⠉⠉⠉⠉⠓⢤⡀⠀
+⠀⡇⠀⠀⢸⣿⡇⠈⠉⠉⠉⣿⡄⢰⠃⠀⢰⣿⡀⠀⠈⣿⡄⠀⠀⠀⢰⡀⠀⠀⢿⠀⠀⡆⠀⠀⢸⣿⡇⠀⠀⠈⠁⠀⢸⣷⠀⠈⢷⣤⣄⣀⣀⣀⠀⠀⠈⣿⡄
+⠀⠹⡄⠀⠀⠻⠿⠟⠀⠀⢀⣿⣷⠃⠀⠀⠈⠉⠁⠀⠀⢸⣧⠀⠀⠀⢸⣧⠀⠀⠀⠀⣼⡇⠀⠀⢸⣿⡇⠀⠀⢰⣲⣶⣾⣿⣀⡀⡴⠋⠛⠿⠿⠛⠀⠀⣠⣿⠇
+⠀⠀⠙⢶⣤⣀⣀⣠⣴⡀⢸⣿⠇⠀⢀⣖⣦⣤⣤⠀⠀⠈⣿⣄⠀⠀⠀⣿⡆⠀⠀⢠⣿⡇⠀⠀⢸⣿⡇⠀⠀⠈⠉⠁⠀⠀⠀⣿⣶⣤⣀⣀⣀⣠⣤⣾⡿⠏⠀
+⠀⠀⠀⠀⠉⠙⠛⠛⠋⠛⠿⠛⢶⣶⣾⡿⠁⠀⠈⢦⣤⣤⣼⣿⣄⣀⣠⣿⠹⣄⣀⣾⡿⢧⣀⣀⣼⣿⠰⣤⣤⣤⣴⣶⣶⣶⣿⡿⠃⠉⠙⠛⠛⠛⠋⠁
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVC107F1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5TVC107F1V');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4196177780480181"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="google-adsense-account" content="ca-pub-4196177780480181">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='../unpkg.com/boxicons%402.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>FUSION</title>
+    <link rel="icon" herf="sgs-logo.png" type=image/png>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB243QR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div class="bodyOverlay"></div>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loadingMessage" id="loadingMessage"></span>
+    </div>
+
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText"></span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('index.html')">
+                    <!-- <i class='bx bx-home-alt pageIcon' ></i> -->
+                    <span class="horText">Home</span>
+                </div>
+                <div class="horPage" onclick="location.replace('games.html')">
+                    <!-- <i class='bx bx-joystick pageIcon' ></i> -->
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage horSelected">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Soundboard</span>
+                    <div class="horSelectedBar"></div>
+                </div>
+                <div class="horPage" onclick="location.replace('form.html')">
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
+                    <span class="horText">Request</span>
+                </div>
+                <div class="horPage" onclick="location.replace('prx.html')">
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
+                    <span class="horText">AI</span>
+                </div>
+                <div class="horPage" onclick="location.replace('leaderboard.html')">
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
+                    <span class="horText">Leaderboard</span>
+                </div>
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <!-- <i class='bx bx-link-alt pageIcon' ></i> -->
+                    <span class="horText">More</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                        <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                    </div>
+                </div>
+                <div class="horPage" onclick="location.replace('settings.html')">
+                    <!-- <i class='bx bx-cog pageIcon' ></i> -->
+                    <span class="horText">Settings</span>
+                </div>
+                <div class="horPage" onclick="location.replace('profile.html')">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
+        <header>
+            <!-- <br>
+            <div class="toggle-background">
+                <i class='bx bx-horizontal-right toggle' ></i>
+            </div> -->
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">FUSION</span>
+                </div>
+            </div>
+
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href='index.html'>
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='games.html'>
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+            
+
+                    <li class="nav-link">
+                        <a href="#" class="selected">
+                            <div class="selected-bar"></div>
+                            <i class='bx bx-volume-full icon' ></i>
+                            <span class="text nav-text">Soundboard</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href='form.html'>
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Resuest</span>
+                            <span class="hovertext">Request</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='prx.html'>
+                            <i class='bx bx-chip icon' ></i>
+                            <span class="text nav-text">AI</span>
+                            <span class="hovertext">AI</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='leaderboard.html'>
+                            <i class='bx bx-trophy icon' ></i>
+                            <span class="text nav-text">Leaderboard</span>
+                            <span class="hovertext">Leaderboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="#" onclick="optionsMenu('linkOptions')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">More</span>
+                            <span class="hovertext">More</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
+                                <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                                </button>
+                                <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                                </button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link">
+                        <a href='settings.html'>
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
+
+                    <li class="mode">
+                        <a href='profile.html'>
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
+
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section">
+        <br>
+        <div class="title">FUSION'S Soundboard</div>
+        <div class="text">I randomly made this soundboard once for fun and I thought it would be nice to include on the website :)</div>
+        <div class="text">This is to be used to for fun purposes, please remember I'm not responsible for any trouble this may cause you.</div>
+        <br>
+        <div class="text" id="soundcount" style="display: inline-table; float: left;">Sounds: 16<br>Updated: 11/4/22 (v5.1.1)</div>
+
+            </button>
+        </div>
+        <br>
+        <div style="height: 35px; width: 1px;"></div>
+        <div class="search-box" style="width: 56.50%">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search by sound name..." id="searchbarSoundboard" onkeyup="searchSoundboard()">
+        </div>
+        <div class="soundboard_button" id="play_all_btn" onclick="playAll()">
+            <a class="soundboard_click" id="play_all_click">
+                <div class="soundboard_title sb_btn_title" id="bruh">Play All</div>
+            </a>
+        </div>
+        <div class="soundboard_button" id="play_all_btn" onclick="stopAll()">
+            <a class="soundboard_click" id="click">
+                <div class="soundboard_title sb_btn_title" id="title">Stop All</div>
+            </a>
+        </div>
+        <br><br>
+        <svg style="display: none">
+            <path id="lol" class="around" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+        </svg>
+
+        <div style="text-align: center; width: 92%; margin: auto; transform: translateX(-0.3%);" id="gamebar">
+            <!-- <div class="soundboard" id="Android Notif">
+                <audio class="sound" id="android_notif_audio" src="Soundboard/android-notif.mp3" preload="auto"></audio>
+                <a class="soundboard_click" onclick="playSound('android_notif')" id="click">
+                    <div class="soundboard_title" id="title">Android.mp3</div>
+                    <i class='bx bx-play icon' id="play_icon">
+                        <svg viewBox="0 0 36 36" class="circle-svg soundboard-circle">
+                            <path class="around"
+                               stroke-dasharray="100, 100"
+                               d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="percent" id="audio_percent" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                         </svg>
+                     </i>
+                </a>
+            </div> -->
+        </div>
+
+        <br><br>
+        <span class="text">loads of more sounds will be added just give me some time thanks :)</span>
+        <br><br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright FUSION ©2026</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
+        <div class="alerts" id="alerts">
+        </div>
+    </section>
+
+    <!-- <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe> -->
+
+    <script src="script.js"></script>
+    <!-- <script src="./Scripts/connection.js"></script> -->
+    <script src="../cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="Scripts/soundboard.js"></script>
+    <script src="Scripts/settings.js"></script>
+    <script src="Scripts/hotkeys.js"></script>
+
+        <script src="Scripts/effect.js"></script>
+    <script src="Scripts/sitelock.js"></script>
+
+</body>
+
+
+</html>

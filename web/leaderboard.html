@@ -1,0 +1,474 @@
+<!--
+⢰⠒⠒⠒⠒⠋⠛⠉⠉⣷⡎⠉⠉⢹⣦⠀⢸⡁⠈⢹⣧⡠⠚⠉⠀⠀⠀⠈⠑⢦⡄⣿⠀⠀⢹⣧⢀⡴⠊⠉⠀⠀⠈⠓⢤⣄⠀⣾⠉⠉⠑⣦⡀⠀⣶⠒⠒⣦⡀
+⢸⡀⠀⠀⣤⣤⣤⣶⣶⣿⡇⠀⠀⢸⣿⠀⢸⠀⠀⢸⣿⡇⠀⠀⢾⣿⣿⣦⣾⣿⠏⡇⠀⠀⢸⣿⡏⠀⠀⣰⣶⣶⡦⠀⠀⢻⣧⡏⠀⠀⠀⠘⢿⣄⣿⠀⢀⣿⡇
+⠸⡇⠀⠀⠛⠛⠛⢻⣍⠁⡇⠀⠀⢸⣿⡀⢸⡇⠀⢸⣿⢧⡀⠀⠀⠀⠉⠉⠙⢦⣄⡇⠀⠀⢸⣿⠀⠀⠀⣿⡏⠀⢠⠀⠀⠀⣿⡇⠀⠀⡀⠀⠈⢻⣿⠀⢸⣿⡇
+⠀⡇⠀⠀⢠⣤⣤⣼⣿⠀⣧⠀⠀⢸⣿⡇⢸⡇⠀⢸⣿⢈⣻⣶⣶⣦⣤⠀⠀⠈⣿⡇⠀⠀⢸⣿⡀⠀⠀⣿⡇⠀⣤⠀⠀⢀⣿⣧⠀⠀⣿⣄⠀⠀⠀⠀⢸⣿⠁
+⠀⡇⠀⠀⢸⣿⠋⠉⠁⠀⠹⡂⠀⠀⠙⠓⠋⠁⢀⣼⣿⡉⠀⠉⠓⠛⠋⠀⠀⣰⣿⡟⠀⠀⢸⣿⢣⡀⠀⠈⠛⠚⠁⠀⣠⣾⣿⣿⠀⢰⣿⠛⣦⠀⠀⠀⢸⣿⠀
+⠀⣧⣀⣀⣸⣿⠀⠀⠀⠀⠀⠙⢶⣤⣤⣤⣤⣴⣿⡿⠃⠙⢷⣦⣤⣤⣤⣶⣿⡿⠋⢧⣤⣤⣾⡿⠈⠻⢶⣤⣤⣤⣤⣾⣿⠟⠑⣿⣤⣼⣿⠀⠈⢷⣀⣀⣸⣿⠀
+⠀⠈⠛⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠙⠛⠛⠃⠀
+⠀⠀⢀⡤⠒⠋⠉⠉⠒⠢⣄⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⡠⠤⣄⠀⡠⠖⠋⠉⠉⠉⠑⣦⡄⠀⠀
+⠀⢠⠋⠀⠀⢠⣴⣦⡀⠀⠈⣿⡄⠀⠀⡸⠁⠀⠀⠉⣷⡄⠀⢠⠉⠉⠉⠉⠙⣦⡀⣰⠉⠉⠉⠉⢹⣾⠉⠁⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⣠⣶⣶⣦⣼⣿⠇⠀⠀
+⠀⡏⠀⠀⠀⣿⣟⣉⠣⣤⣤⣼⡷⠀⡰⠃⠀⡀⠀⠀⢸⣧⠀⢸⠀⠀⠀⠀⠀⢹⣧⠃⠀⠀⠀⠀⢸⣿⠀⠀⠀⢦⣾⣿⣿⠿⠟⢇⠀⠀⠈⠉⠉⠉⠉⠓⢤⡀⠀
+⠀⡇⠀⠀⢸⣿⡇⠈⠉⠉⠉⣿⡄⢰⠃⠀⢰⣿⡀⠀⠈⣿⡄⠀⠀⠀⢰⡀⠀⠀⢿⠀⠀⡆⠀⠀⢸⣿⡇⠀⠀⠈⠁⠀⢸⣷⠀⠈⢷⣤⣄⣀⣀⣀⠀⠀⠈⣿⡄
+⠀⠹⡄⠀⠀⠻⠿⠟⠀⠀⢀⣿⣷⠃⠀⠀⠈⠉⠁⠀⠀⢸⣧⠀⠀⠀⢸⣧⠀⠀⠀⠀⣼⡇⠀⠀⢸⣿⡇⠀⠀⢰⣲⣶⣾⣿⣀⡀⡴⠋⠛⠿⠿⠛⠀⠀⣠⣿⠇
+⠀⠀⠙⢶⣤⣀⣀⣠⣴⡀⢸⣿⠇⠀⢀⣖⣦⣤⣤⠀⠀⠈⣿⣄⠀⠀⠀⣿⡆⠀⠀⢠⣿⡇⠀⠀⢸⣿⡇⠀⠀⠈⠉⠁⠀⠀⠀⣿⣶⣤⣀⣀⣀⣠⣤⣾⡿⠏⠀
+⠀⠀⠀⠀⠉⠙⠛⠛⠋⠛⠿⠛⢶⣶⣾⡿⠁⠀⠈⢦⣤⣤⣼⣿⣄⣀⣠⣿⠹⣄⣀⣾⡿⢧⣀⣀⣼⣿⠰⣤⣤⣤⣴⣶⣶⣶⣿⡿⠃⠉⠙⠛⠛⠛⠋⠁
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVC107F1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5TVC107F1V');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4196177780480181"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="google-adsense-account" content="ca-pub-4196177780480181">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
+    <link rel="stylesheet" href="board.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons%402.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>FUSION</title>
+    <link rel="icon" herf="sgs-logo.png" type="image/png">
+</head>
+<body>
+    <div class="bodyOverlay"></div>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loadingMessage" id="loadingMessage"></span>
+    </div>
+
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText"></span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('index.html')">
+                    <span class="horText horSelected">Home</span>
+                </div>
+                <div class="horPage" onclick="location.replace('games.html')">
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage" onclick="location.replace('chat.html')">
+                    <span class="horText">Chat</span>
+                </div>
+
+                <div class="horPage" onclick="location.replace('form.html')">
+                    <span class="horText">Request</span>
+                </div>
+
+                 <div class="horPage" onclick="location.replace('prx.html')">
+                    <span class="horText">AI</span>
+                </div>
+                
+                <div class="horPage" onclick="location.replace('leaderboard.html')">
+                    <span class="horText horSelected">Leaderboard</span>
+                    <div class="horSelectedBar"></div>
+                </div>
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <span class="horText">More</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                        </button>
+                        <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                        </button>
+                    </div>
+                </div>
+                <div class="horPage" onclick="location.replace('settings.html')">
+                    <span class="horText">Settings</span>
+                </div>
+                <div class="horPage" onclick="location.replace('profile.html')">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
+        <header>
+
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">FUSION</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='games.html'>
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='chat.html'>
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href='form.html'>
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Request</span>
+                            <span class="hovertext">Request</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='prx.html'>
+                            <i class='bx bx-chip icon' ></i>
+                            <span class="text nav-text">AI</span>
+                            <span class="hovertext">AI</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">                
+                    <a href="#" class="selected">
+                        <div class="selected-bar"></div>
+                            <i class='bx bx-trophy icon' ></i>
+                            <span class="text nav-text">Leaderboard</span>
+                            <span class="hovertext">Leaderboard</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="#" onclick="optionsMenu('linkOptions')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">More</span>
+                            <span class="hovertext">More</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
+                                <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                                </button>
+                                <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                                </button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link">
+                        <a href='settings.html'>
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <a href='profile.html'>
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <br>
+    <br>
+
+    <h1 class="title">Leaderboards</h1>
+    <h2 class="submit">Have a highscore? Submit <a href="scores.html" target="">🠺🠺HERE🠸🠸</a></h2>
+    <h3 class="ps">If your game isn't listed, use the high scores submission form and list it there.</a></h3>
+
+
+<div class="game">
+        <a href="https://www.fsgame.org/web/games.html#block-blast" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/block-blast.avif); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Block Blast
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Bob Gibson</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 3,870
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/10/2024
+          </p>
+        </div>
+        </div>
+
+
+    </div>
+    <div class="game">
+      <a href="https://www.fsgame.org/web/games.html#slope" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/slope.png); background-size: cover; background-position: center center;">
+  </div>
+</a>
+      <div id="game-content" class="game-content">
+        <h1>
+          <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Slope
+        </h1>
+        <p class="by">
+          <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Alexi R</span>
+        </p>
+        <p class="record">
+          <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 106
+        </p>
+        <p class="date">
+          <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/20/2023
+        </p>
+      </div>
+    </div>
+    <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#fruit" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/fruit.jpeg); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Fruit Ninja
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">
+Anh Anh T</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 1,184
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 03/24/2024
+          </p>
+        </div>
+        </div>
+        <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#cube" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/cube.jpeg); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> CubeField
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Ernesto M</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 1,129,598
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 03/24/2024
+          </p>
+        </div>
+        </div>
+        
+               <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#subway" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/subway.png); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Subway Surfers
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Anthony W</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 
+784,006
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/04/2024
+          </p>
+        </div>
+        </div>
+        
+        <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#doodle" target="_blank">
+  <div class="gameicon" style="background-image: url(https://cdn.jsdelivr.net/gh/james222323/fs@master/img/jump.jpeg); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Doodle Jump
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Ezra H</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 34,591
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/05/2024
+          </p>
+        </div>
+        </div>
+
+
+          <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#sword" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/deep.webp); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> The Deepest Sword
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">King AB</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 7:02
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/05/2024
+          </p>
+        </div>
+        </div>
+
+
+        <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#driftboss" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/drift.jpeg); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Drift Boss
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Ceaser A</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 719
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/05/2024
+          </p>
+        </div>
+        </div>
+
+
+         
+        <div class="game">
+        <a href="https://www.fsgame.org/web/games.html#tetris" target="_blank">
+  <div class="gameicon" style="background-image: url(./tempimg/tetris.jpeg); background-size: cover; background-position: center center;">
+  </div>
+</a>
+        <div id="game-content" class="game-content">
+          <h1>
+            <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> Tetris
+          </h1>
+          <p class="by">
+            <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i> Record held by <span style="font-weight: 600;">Ceaser A</span>
+          </p>
+          <p class="record">
+            <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> 29,743
+          </p>
+          <p class="date">
+            <i class="fa-solid fa-timer fa-xs" style="color: #ffffff;"></i> 12/10/2024
+          </p>
+        </div>
+        </div>
+
+    <h1 style="text-align: center; margin-top: 1vw; margin-bottom: 1vw;">More records soon!</h1>
+  </body>
+
+  <footer class="footer" id="footer">
+    <br>
+    <span class="text">Copyright FUSION ©2026</span>
+    <br>
+    <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+    <br> -->
+    <span class="text">All games on this site are owned to their respective owners.</span>
+    <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+</footer>
+
+<script>
+  function loadPage(url) {
+      window.location.href = url;
+  }
+</script>
+    </section>
+
+    <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
+        <div class="alerts" id="alerts">
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="Scripts/settings.js"></script>
+    <script src="Scripts/hotkeys.js"></script>
+    <script src="Scripts/sitelock.js"></script>
+        <script src="Scripts/effect.js"></script>
+
+</body>
+
+</html>

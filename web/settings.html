@@ -1,0 +1,429 @@
+<!--
+⢰⠒⠒⠒⠒⠋⠛⠉⠉⣷⡎⠉⠉⢹⣦⠀⢸⡁⠈⢹⣧⡠⠚⠉⠀⠀⠀⠈⠑⢦⡄⣿⠀⠀⢹⣧⢀⡴⠊⠉⠀⠀⠈⠓⢤⣄⠀⣾⠉⠉⠑⣦⡀⠀⣶⠒⠒⣦⡀
+⢸⡀⠀⠀⣤⣤⣤⣶⣶⣿⡇⠀⠀⢸⣿⠀⢸⠀⠀⢸⣿⡇⠀⠀⢾⣿⣿⣦⣾⣿⠏⡇⠀⠀⢸⣿⡏⠀⠀⣰⣶⣶⡦⠀⠀⢻⣧⡏⠀⠀⠀⠘⢿⣄⣿⠀⢀⣿⡇
+⠸⡇⠀⠀⠛⠛⠛⢻⣍⠁⡇⠀⠀⢸⣿⡀⢸⡇⠀⢸⣿⢧⡀⠀⠀⠀⠉⠉⠙⢦⣄⡇⠀⠀⢸⣿⠀⠀⠀⣿⡏⠀⢠⠀⠀⠀⣿⡇⠀⠀⡀⠀⠈⢻⣿⠀⢸⣿⡇
+⠀⡇⠀⠀⢠⣤⣤⣼⣿⠀⣧⠀⠀⢸⣿⡇⢸⡇⠀⢸⣿⢈⣻⣶⣶⣦⣤⠀⠀⠈⣿⡇⠀⠀⢸⣿⡀⠀⠀⣿⡇⠀⣤⠀⠀⢀⣿⣧⠀⠀⣿⣄⠀⠀⠀⠀⢸⣿⠁
+⠀⡇⠀⠀⢸⣿⠋⠉⠁⠀⠹⡂⠀⠀⠙⠓⠋⠁⢀⣼⣿⡉⠀⠉⠓⠛⠋⠀⠀⣰⣿⡟⠀⠀⢸⣿⢣⡀⠀⠈⠛⠚⠁⠀⣠⣾⣿⣿⠀⢰⣿⠛⣦⠀⠀⠀⢸⣿⠀
+⠀⣧⣀⣀⣸⣿⠀⠀⠀⠀⠀⠙⢶⣤⣤⣤⣤⣴⣿⡿⠃⠙⢷⣦⣤⣤⣤⣶⣿⡿⠋⢧⣤⣤⣾⡿⠈⠻⢶⣤⣤⣤⣤⣾⣿⠟⠑⣿⣤⣼⣿⠀⠈⢷⣀⣀⣸⣿⠀
+⠀⠈⠛⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠙⠛⠛⠃⠀
+⠀⠀⢀⡤⠒⠋⠉⠉⠒⠢⣄⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⡠⠤⣄⠀⡠⠖⠋⠉⠉⠉⠑⣦⡄⠀⠀
+⠀⢠⠋⠀⠀⢠⣴⣦⡀⠀⠈⣿⡄⠀⠀⡸⠁⠀⠀⠉⣷⡄⠀⢠⠉⠉⠉⠉⠙⣦⡀⣰⠉⠉⠉⠉⢹⣾⠉⠁⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⣠⣶⣶⣦⣼⣿⠇⠀⠀
+⠀⡏⠀⠀⠀⣿⣟⣉⠣⣤⣤⣼⡷⠀⡰⠃⠀⡀⠀⠀⢸⣧⠀⢸⠀⠀⠀⠀⠀⢹⣧⠃⠀⠀⠀⠀⢸⣿⠀⠀⠀⢦⣾⣿⣿⠿⠟⢇⠀⠀⠈⠉⠉⠉⠉⠓⢤⡀⠀
+⠀⡇⠀⠀⢸⣿⡇⠈⠉⠉⠉⣿⡄⢰⠃⠀⢰⣿⡀⠀⠈⣿⡄⠀⠀⠀⢰⡀⠀⠀⢿⠀⠀⡆⠀⠀⢸⣿⡇⠀⠀⠈⠁⠀⢸⣷⠀⠈⢷⣤⣄⣀⣀⣀⠀⠀⠈⣿⡄
+⠀⠹⡄⠀⠀⠻⠿⠟⠀⠀⢀⣿⣷⠃⠀⠀⠈⠉⠁⠀⠀⢸⣧⠀⠀⠀⢸⣧⠀⠀⠀⠀⣼⡇⠀⠀⢸⣿⡇⠀⠀⢰⣲⣶⣾⣿⣀⡀⡴⠋⠛⠿⠿⠛⠀⠀⣠⣿⠇
+⠀⠀⠙⢶⣤⣀⣀⣠⣴⡀⢸⣿⠇⠀⢀⣖⣦⣤⣤⠀⠀⠈⣿⣄⠀⠀⠀⣿⡆⠀⠀⢠⣿⡇⠀⠀⢸⣿⡇⠀⠀⠈⠉⠁⠀⠀⠀⣿⣶⣤⣀⣀⣀⣠⣤⣾⡿⠏⠀
+⠀⠀⠀⠀⠉⠙⠛⠛⠋⠛⠿⠛⢶⣶⣾⡿⠁⠀⠈⢦⣤⣤⣼⣿⣄⣀⣠⣿⠹⣄⣀⣾⡿⢧⣀⣀⣼⣿⠰⣤⣤⣤⣴⣶⣶⣶⣿⡿⠃⠉⠙⠛⠛⠛⠋⠁
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+
+    <script src="Scripts/color.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVC107F1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5TVC107F1V');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4196177780480181"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="google-adsense-account" content="ca-pub-4196177780480181">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='../unpkg.com/boxicons%402.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Fusion Games</title>
+    <link rel="icon" herf="sgs-logo.png" type="image/png" id="site-icon">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB243QR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div class="bodyOverlay"></div>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loadingMessage" id="loadingMessage"></span>
+    </div>
+
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText"></span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('index.html')">
+                    <!-- <i class='bx bx-home-alt pageIcon' ></i> -->
+                    <span class="horText">Home</span>
+                </div>
+                <div class="horPage" onclick="location.replace('games.html')">
+                    <!-- <i class='bx bx-joystick pageIcon' ></i> -->
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage" onclick="location.replace('chat.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Chat</span>
+                </div>
+                    <div class="horPage" onclick="location.replace('prx.html')">
+                    <span class="horText">AI</span>
+                </div>
+                <div class="horPage" onclick="location.replace('form.html')">
+                    <span class="horText">Request</span>
+                </div>
+                    <div class="horPage" onclick="location.replace('leaderboard.html')">
+                    <span class="horText">Leaderboard</span>
+                </div>
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <!-- <i class='bx bx-link-alt pageIcon' ></i> -->
+                    <span class="horText">More</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                        </button>
+                        <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                        </button>
+                    </div>
+                </div>
+                <div class="horPage horSelected">
+                    <!-- <i class='bx bx-cog pageIcon' ></i> -->
+                    <span class="horText">Settings</span>
+                    <div class="horSelectedBar"></div>
+                </div>
+                <div class="horPage" onclick="location.replace('profile.html')">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
+        <header>
+            <!-- <br>
+            <div class="toggle-background">
+                <i class='bx bx-horizontal-right toggle' ></i>
+            </div> -->
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Fusion</span>
+                </div>
+            </div>
+
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href='index.html'>
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='games.html'>
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href='chat.html'>
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href='form.html'>
+                            <i class='bx bx-book-alt icon'></i>
+                            <span class="text nav-text">Request</span>
+                            <span class="hovertext">Request</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='prx.html'>
+                            <i class='bx bx-chip icon'></i>
+                            <span class="text nav-text">AI</span>
+                            <span class="hovertext">AI</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='leaderboard.html'>
+                            <i class='bx bx-trophy icon' ></i>
+                            <span class="text nav-text">Leaderboard</span>
+                            <span class="hovertext">Leaderboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="#" onclick="optionsMenu('linkOptions')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">More</span>
+                            <span class="hovertext">More</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
+                                <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                                <button onclick="window.location.href = 'coes.html'" class="dropbtn" id="altLinks">Codes</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link">
+                        <a href='settings.html'>
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
+
+                    <li class="mode">
+                        <a href='profile.html'>
+                            <i class='bx bx-user-circle icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
+
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section">
+        <br>
+        <!-- <div class="search-box" style="float: left; transform: translateX(8.5%); display: relative;">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
+        </div>
+        <br><br><br> -->
+        <div class="pageHeading">General</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">General settings for the site.</div>
+        <div class="setting">
+            <div class="settingsTitle">Navigation Bar</div>
+            <div class="pageDescription">Change between a sidebar and a horizontal bar.</div>
+            <select class="settingsSelect" id="navSelect">
+                <option class="settingsSelectOption">Sidebar</option>
+                <option class="settingsSelectOption">Horizontal Bar</option>
+            </select>
+            <br>
+            <div class="settingsTitle">Instantly Launch Game</div>
+            <div class="pageDescription">When you click on a game it will instantly go to it instead of viewing the splash screen of information.</div>
+            <div class="settingsSwitch" onclick="instanlyLaunchGame(true)">
+                <span class="switchBack" id="instantGameBack"></span>
+                <span class="switchDot" id="instantGameSwitch"></span>
+            </div>
+            <br>
+            <div class="settingsTitle">Show Game Thumbnail</div>
+            <div class="pageDescription">This hides the game thumbnails and makes it more compact. This also improves loading times and reduces network usage.</div>
+            <div class="settingsSwitch" onclick="gameIconSetting(true)">
+                <span class="switchBack" id="gameIconBack"></span>
+                <span class="switchDot" id="gameIconSwitch"></span>
+            </div>
+            <br>
+            <div class="settingsTitle">FPS Count</div>
+            <div class="pageDescription">Toggle the frames per second while playing a game. Count will appear as average/minimum FPS.</div>
+            <div class="settingsSwitch" onclick="FPSSetting(true)">
+                <span class="switchBack" id="FPSBack"></span>
+                <span class="switchDot" id="FPSSwitch"></span>
+            </div>
+            <br>
+        </div>
+        <div class="pageLine"></div>
+        <br>
+        <div class="pageHeading">Personalization</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Personalize the site to your likings.</div>
+        <div class="setting">
+            <div class="settingsTitle">Mode</div>
+            <div class="pageDescription">Change the website's appearance by a dark and a light contrast.</div>
+            <select class="settingsSelect" id="modeSelect">
+                <option class="settingsSelectOption">Dark</option>
+                <option class="settingsSelectOption">Holiday</option>
+                <option class="settingsSelectOption">Light</option>
+            </select>
+            <br>
+            <div class="settingsTitle">Theme Color</div>
+            <div class="pageDescription">This applies a nice slight color change to the background and on some elements to give the site a colorful look.</div>
+            <select class="settingsSelect" id="themeSelect">
+                <option class="settingsSelectOption">Purple (Default)</option>
+                <option class="settingsSelectOption">Custom</option>
+                <option class="settingsSelectOption">Red</option>
+                <option class="settingsSelectOption">Orange</option>
+                <option class="settingsSelectOption">Light Blue</option>
+                <option class="settingsSelectOption">Yellow</option>
+                <option class="settingsSelectOption">Green</option>
+                <option class="settingsSelectOption">Purple</option>
+            </select>
+            <input name="Color Picker" type="color" class="color_picker" id="theme_color_picker" oninput="setTheme()">
+            <br>
+            <div class="settingsTitle">Accent Color</div>
+            <div class="pageDescription">This applies a nice slight color change to the background and on some elements to give the site a colorful look.</div>
+            <select class="settingsSelect" id="accentSelect">
+                <option class="settingsSelectOption">None (Default)</option>
+                <option class="settingsSelectOption">Custom</option>
+                <option class="settingsSelectOption">Red</option>
+                <option class="settingsSelectOption">Orange</option>
+                <option class="settingsSelectOption">Light Blue</option>
+                <option class="settingsSelectOption">Yellow</option>
+                <option class="settingsSelectOption">Green</option>
+                <option class="settingsSelectOption">Purple</option>
+            </select>
+            <input name="Color Picker" type="color" class="color_picker" id="accent_color_picker" oninput="setAccent()">
+            <br>
+            <div class="settingsTitle">Accent Color Strength</div>
+            <div class="pageDescription">This changes how strong the opacity of the accent color is.</b></div>
+            <select class="settingsSelect" id="accentStrengthSelect">
+                <option class="settingsSelectOption">Very Weak</option>
+                <option class="settingsSelectOption">Weak</option>
+                <option class="settingsSelectOption">Good</option>
+                <option class="settingsSelectOption">Strong 💪</option>
+            </select>
+            <br>
+            <div class="settingsTitle">Show Game Thumbnail Text</div>
+            <div class="pageDescription">Toggle whether to show the text on game thumbnails. When this setting is off it only appears on hover.</div>
+            <div class="settingsSwitch" onclick="ThumbnailText(true)">
+                <span class="switchBack" id="TTBack"></span>
+                <span class="switchDot" id="TTSwitch"></span>
+            </div>
+            <br>
+        </div>
+        <div class="pageLine"></div>
+        <br>
+        <div class="pageHeading">Other</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Other general site settings. Some of this might be useful others not.</div>
+        <div class="setting">
+            <div class="settingsTitle">Hot Keys</div>
+            <div class="pageDescription">Hot keys allow you to navigate the site much easier. You can view them using <b>Shift + /</b></div>
+            <div class="settingsSwitch" onclick="hotKeysSetting(true)">
+                <span class="switchBack" id="hotkeysBack"></span>
+                <span class="switchDot" id="hotkeysSwitch"></span>
+                
+            </div>
+            <br>
+            <div class="settingsTitle">Always on Top Navbar</div>
+            <div class="pageDescription">For the horizontal navbar, this will keep it at the top of the screen even when scrolling.</div>
+            <div class="settingsSwitch" onclick="alwaysOnTop(true)">
+                <span class="switchBack" id="alwaysOnTopBack"></span>
+                <span class="switchDot" id="alwaysOnTopSwitch"></span>
+            </div>
+            <br>
+        </div>
+        <br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright FUSION ©2026</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
+        <div class="alerts" id="alerts">
+        </div>
+    </section>
+
+    <!-- <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe> -->
+
+    <script src="script.js"></script>
+    <!-- <script src="./Scripts/connection.js"></script> -->
+    <script src="Scripts/settings.js"></script>
+    <script src="Scripts/hotkeys.js"></script>
+    <script src="Scripts/sitelock.js"></script>
+        <script src="Scripts/effect.js"></script>
+
+</body>
+
+</html>

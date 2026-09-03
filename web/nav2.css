@@ -1,0 +1,145 @@
+.horNavbar {
+    width: 100%;
+    height: 50px;
+    background-color: var(--sidebar-color);
+    position: relative;
+    /* position: fixed; */
+    z-index: 10;
+    display: none;
+    transition: var(--tran-05);
+}
+
+.horNavbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--accent-color);
+    opacity: var(--accent-opacity);
+    mix-blend-mode: multiply;
+}
+
+body.dark .horNavbar::before {
+    mix-blend-mode: screen;
+}
+
+.horBar {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    margin: auto;
+    transform: translateY(-2px);
+}
+
+.horLogo {
+    height: 35px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(9px);
+}
+
+.horLogoText {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 1;
+    color: var(--primary-color);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+body.dark .horLogoText {
+    color: var(--text-color);
+}
+
+.horPage {
+    height: 50px;
+    width: auto;
+    /* background-color: #fff; */
+    display: inline-table;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-left: -3px;
+    position: relative;
+    border-radius: 0px;
+    align-text: center;
+    transition: var(--tran-03)
+}
+
+.horPage:hover {
+/*    background-color: #cccccc20;*/
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.horPage:hover .horText {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+body.dark .horPage:hover .horText {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.horSelected {
+    background-color: #cccccc00;
+}
+
+.horSelectedBar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transform: translateY(8.5px);
+}
+
+.horSelected .horText, .horSelected .pageIcon {
+    color: var(--primary-color);
+}
+
+body.dark .horSelected .horText, .horSelected .pageIcon {
+    color: var(--text-color);
+}
+
+.horText {
+    color: var(--text-color);
+    font-size: 15px;
+/*    padding-left: 5px;*/
+    font-weight: 700;
+    transition: var(--tran-03);
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.pageIcon {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.profileIcon {
+    font-size: 21px;
+    transform: translateY(3px);
+}
+
+.horPage:hover .profileIcon {
+    color: var(--primary-color);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+body.dark .horPage:hover .profileIcon {
+    color: var(--text-color);
+    font-size: 21px;
+    font-weight: 700;
+}

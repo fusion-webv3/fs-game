@@ -1,0 +1,490 @@
+<!--
+⢰⠒⠒⠒⠒⠋⠛⠉⠉⣷⡎⠉⠉⢹⣦⠀⢸⡁⠈⢹⣧⡠⠚⠉⠀⠀⠀⠈⠑⢦⡄⣿⠀⠀⢹⣧⢀⡴⠊⠉⠀⠀⠈⠓⢤⣄⠀⣾⠉⠉⠑⣦⡀⠀⣶⠒⠒⣦⡀
+⢸⡀⠀⠀⣤⣤⣤⣶⣶⣿⡇⠀⠀⢸⣿⠀⢸⠀⠀⢸⣿⡇⠀⠀⢾⣿⣿⣦⣾⣿⠏⡇⠀⠀⢸⣿⡏⠀⠀⣰⣶⣶⡦⠀⠀⢻⣧⡏⠀⠀⠀⠘⢿⣄⣿⠀⢀⣿⡇
+⠸⡇⠀⠀⠛⠛⠛⢻⣍⠁⡇⠀⠀⢸⣿⡀⢸⡇⠀⢸⣿⢧⡀⠀⠀⠀⠉⠉⠙⢦⣄⡇⠀⠀⢸⣿⠀⠀⠀⣿⡏⠀⢠⠀⠀⠀⣿⡇⠀⠀⡀⠀⠈⢻⣿⠀⢸⣿⡇
+⠀⡇⠀⠀⢠⣤⣤⣼⣿⠀⣧⠀⠀⢸⣿⡇⢸⡇⠀⢸⣿⢈⣻⣶⣶⣦⣤⠀⠀⠈⣿⡇⠀⠀⢸⣿⡀⠀⠀⣿⡇⠀⣤⠀⠀⢀⣿⣧⠀⠀⣿⣄⠀⠀⠀⠀⢸⣿⠁
+⠀⡇⠀⠀⢸⣿⠋⠉⠁⠀⠹⡂⠀⠀⠙⠓⠋⠁⢀⣼⣿⡉⠀⠉⠓⠛⠋⠀⠀⣰⣿⡟⠀⠀⢸⣿⢣⡀⠀⠈⠛⠚⠁⠀⣠⣾⣿⣿⠀⢰⣿⠛⣦⠀⠀⠀⢸⣿⠀
+⠀⣧⣀⣀⣸⣿⠀⠀⠀⠀⠀⠙⢶⣤⣤⣤⣤⣴⣿⡿⠃⠙⢷⣦⣤⣤⣤⣶⣿⡿⠋⢧⣤⣤⣾⡿⠈⠻⢶⣤⣤⣤⣤⣾⣿⠟⠑⣿⣤⣼⣿⠀⠈⢷⣀⣀⣸⣿⠀
+⠀⠈⠛⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠙⠛⠛⠃⠀
+⠀⠀⢀⡤⠒⠋⠉⠉⠒⠢⣄⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⡠⠤⣄⠀⡠⠖⠋⠉⠉⠉⠑⣦⡄⠀⠀
+⠀⢠⠋⠀⠀⢠⣴⣦⡀⠀⠈⣿⡄⠀⠀⡸⠁⠀⠀⠉⣷⡄⠀⢠⠉⠉⠉⠉⠙⣦⡀⣰⠉⠉⠉⠉⢹⣾⠉⠁⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⣠⣶⣶⣦⣼⣿⠇⠀⠀
+⠀⡏⠀⠀⠀⣿⣟⣉⠣⣤⣤⣼⡷⠀⡰⠃⠀⡀⠀⠀⢸⣧⠀⢸⠀⠀⠀⠀⠀⢹⣧⠃⠀⠀⠀⠀⢸⣿⠀⠀⠀⢦⣾⣿⣿⠿⠟⢇⠀⠀⠈⠉⠉⠉⠉⠓⢤⡀⠀
+⠀⡇⠀⠀⢸⣿⡇⠈⠉⠉⠉⣿⡄⢰⠃⠀⢰⣿⡀⠀⠈⣿⡄⠀⠀⠀⢰⡀⠀⠀⢿⠀⠀⡆⠀⠀⢸⣿⡇⠀⠀⠈⠁⠀⢸⣷⠀⠈⢷⣤⣄⣀⣀⣀⠀⠀⠈⣿⡄
+⠀⠹⡄⠀⠀⠻⠿⠟⠀⠀⢀⣿⣷⠃⠀⠀⠈⠉⠁⠀⠀⢸⣧⠀⠀⠀⢸⣧⠀⠀⠀⠀⣼⡇⠀⠀⢸⣿⡇⠀⠀⢰⣲⣶⣾⣿⣀⡀⡴⠋⠛⠿⠿⠛⠀⠀⣠⣿⠇
+⠀⠀⠙⢶⣤⣀⣀⣠⣴⡀⢸⣿⠇⠀⢀⣖⣦⣤⣤⠀⠀⠈⣿⣄⠀⠀⠀⣿⡆⠀⠀⢠⣿⡇⠀⠀⢸⣿⡇⠀⠀⠈⠉⠁⠀⠀⠀⣿⣶⣤⣀⣀⣀⣠⣤⣾⡿⠏⠀
+⠀⠀⠀⠀⠉⠙⠛⠛⠋⠛⠿⠛⢶⣶⣾⡿⠁⠀⠈⢦⣤⣤⣼⣿⣄⣀⣠⣿⠹⣄⣀⣾⡿⢧⣀⣀⣼⣿⠰⣤⣤⣤⣴⣶⣶⣶⣿⡿⠃⠉⠙⠛⠛⠛⠋⠁
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVC107F1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5TVC107F1V');
+</script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4196177780480181"
+     crossorigin="anonymous"></script>
+     
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TB243QR');</script>
+    <!-- End Google Tag Manager -->
+    <div class="bodyOverlay"></div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="google-adsense-account" content="ca-pub-4196177780480181">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='../unpkg.com/boxicons%402.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>FUSION</title>
+    <link rel="icon" herf="sgs-logo.png" type="image/png">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB243QR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loadingMessage" id="loadingMessage"></span>
+    </div>
+
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText">FUSION</span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('index.html')">
+                    <!-- <i class='bx bx-home-alt pageIcon' ></i> -->
+                    <span class="horText">Home</span>
+                </div>
+                <div class="horPage" onclick="location.replace('games.html')">
+                    <!-- <i class='bx bx-joystick pageIcon' ></i> -->
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage" onclick="location.replace('chat.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Chat</span>
+                </div>\
+                <div class="horPage" onclick="location.replace('form.html')">
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
+                    <span class="horText">Request</span>
+                </div>
+                 <div class="horPage" onclick="location.replace('prx.html')">
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
+                    <span class="horText">AI</span>
+                </div>
+
+                <div class="horPage" onclick="location.replace('leaderboard.html')">
+                    <span class="horText">Leaderboard</span>
+                </div>
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <!-- <i class='bx bx-link-alt pageIcon' ></i> -->
+                    <span class="horText">More</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                        </button>
+                        <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                        </button>
+                    </div>
+                </div>
+                <div class="horPage" onclick="location.replace('settings.html')">
+                    <!-- <i class='bx bx-cog pageIcon' ></i> -->
+                    <span class="horText">Settings</span>
+                </div>
+                <div class="horPage horSelected" onclick="location.replace('profile-2.html')">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                    <div class="horSelectedBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
+        <header>
+            <!-- <br>
+            <div class="toggle-background">
+                <i class='bx bx-horizontal-right toggle' ></i>
+            </div> -->
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">FUSION</span>
+                </div>
+            </div>
+
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href='index.html'>
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='games.html'>
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href='chat.html'>
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+            
+
+
+                    <li class="nav-link">
+                        <a href='form.html'>
+                            <i class='bx bx-book-alt icon'></i>
+                            <span class="text nav-text">Request</span>
+                            <span class="hovertext">Request</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='prx.html'>
+                            <i class='bx bx-chip icon'></i>
+                            <span class="text nav-text">AI</span>
+                            <span class="hovertext">AI</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='leaderboard.html'>
+                            <i class='bx bx-trophy icon' ></i>
+                            <span class="text nav-text">Leaderboard</span>
+                            <span class="hovertext">Leaderboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="#" onclick="optionsMenu('linkOptions')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">More</span>
+                            <span class="hovertext">More</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
+                                <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                                <button onclick="window.location.href = 'codes.html'" class="dropbtn" id="altLinks">Codes</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link">
+                        <a href='settings.html'>
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
+
+                    <li class="mode">
+                        <a class='selected' href='profile.html'>
+                            <div class="selected-bar"></div>
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
+
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section" id="mainProfile">
+        <!-- <br>
+        <div class="title">Account Settings</div>
+        <div class="text">This is the settings page for your account.</div> -->
+        <br>
+        <!-- <div class="search-box" style="float: left; transform: translateX(8.5%); display: relative;">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
+        </div>
+        <br><br><br> -->
+        <div class="profileBox">
+            <span class="profileUsername" id="profileUsername">No Username Set</span>
+            <input class="profileSelect psuser" type="text" placeholder="Please Refrain from using inappropriate usernames" id="usernameInputProfile" onkeyup="inputUsername()">
+            <br>
+            <span class="profileText" id="profileTitle">No Title Set</span>
+            <select class="profileSelect" id="titleInputProfile">
+                <option class="settingsSelectOption" id="noobie_gamer">Noobie Gamer</option>
+                <!-- <option class="settingsSelectOption" id="pro_gamer">Pro Gamer</option>
+                <option class="settingsSelectOption" id="certified_pro_gamer">Certified Pro Gamer</option>
+                <option class="settingsSelectOption" id="absolutely_cracked">Absolutely Cracked</option>
+                <option class="settingsSelectOption" id="legit_hacker">Legit Hacker</option>
+                <option class="settingsSelectOption" id="bro_im_dead">bro im dead 💀</option>
+                <option class="settingsSelectOption" id="what_the_dog_doin">what the dog doin'</option> -->
+            </select>
+            <br><span class="profileText" id="profileLvlXP">Level: 1 - XP: 25/100</span>
+            <span class="profileText ptr" id="minutes_played_text">Minutes Played: 0 min (0 hrs)</span>
+            <div class="profileEdit" id="profileEdit" onclick="editProfile(true)">
+                <i class='bx bx-edit-alt icon' style="font-size: 25px;"></i>
+            </div>
+            <br><br>
+            <div class="profileStatsBox clickablestat" style="float: left;" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('playedgames').style.display = 'block'">
+                <span class="profileStatsTitle">Games Played</span>
+                <br>
+                <span class="profileStatsText" id="games_played_text"><b>90/111</b></span>
+                <svg viewBox="0 0 36 36" class="circle-svg profileCircle">
+                   <path class="around"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                   <path class="percent" id="games_played" stroke-dasharray="81, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                </svg>
+            </div>
+            <div class="profileStatsBox clickablestat" style="margin: auto" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('achievements').style.display = 'block'">
+                <span class="profileStatsTitle">Achievements</span>
+                <br>
+                <span class="profileStatsText" id="achievements_completed_text"><b>0/12</b></span>
+                <svg viewBox="0 0 36 36" class="circle-svg profileCircle">
+                   <path class="around"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                   <path class="percent" id="achievements_completed" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                </svg>
+            </div>
+            <div class="profileStatsBox" style="float: right; transform: translateY(-80px);">
+                <span class="profileStatsTitle">Badges</span>
+                <br>
+                <span class="profileStatsText" id="badges_earned_text"><b>0/12</b></span>
+                <svg viewBox="0 0 36 36" class="circle-svg profileCircle">
+                   <path class="around"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                   <path class="percent" id="badges_earned" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                </svg>
+            </div>
+        </div>
+
+        <br><div class="profileBox achieveBtn" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('achievements').style.display = 'block'">
+            <span class="profileUsername">Achievements</span>
+            <br>
+            <span class="profileText">Click to view your progress towards achievements.</span>
+            <i class='bx bx-chevron-right achieveIcon'></i>
+        </div>
+        <br><div class="profileBox achieveBtn" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('playedgames').style.display = 'block'">
+            <span class="profileUsername">Games Played</span>
+            <br>
+            <span class="profileText">Click to view the games you've played and haven't yet.</span>
+            <i class='bx bx-chevron-right achieveIcon'></i>
+        </div>
+        <br>
+        <div class="setting">
+            <div class="settingsTitle">Alerts</div>
+            <div class="pageDescription">Choose which alerts you would like to show.</div>
+            <select class="settingsSelect" id="alertSelect" style="width: 15%">
+                <option class="settingsSelectOption">Show All</option>
+                <option class="settingsSelectOption">Level Up + Achievements</option>
+                <option class="settingsSelectOption">Level Up Only</option>
+                <option class="settingsSelectOption">None</option>
+            </select>
+          </div>
+
+        <br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright FUSION ©2026</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="section" id="achievements" style="display: none">
+        <br>
+        <div class="title">Achievements</div>
+        <div class="text">Complete achievements to earn rewards! <b>Scroll to the bottom to view completed ones.</b></div>
+        <div class="blogBack" onclick="loadProfile(), document.getElementById('mainProfile').style.display = 'block', document.getElementById('achievements').style.display = 'none'">
+            <i class='bx bx-chevron-left icon' ></i>
+            <span class="hovertext7">Back</span>
+        </div>
+        <svg style="display: none" id="insertBeforeThisLOL">
+            <path id="lol" class="around" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+        </svg>
+        <br><br>
+
+         <!-- <br><div class="profileBox achievement">
+          <span class="profileUsername">Play Games for 5 Minutes</span>
+          <br>
+          <span class="profileText">Reward: 500xp</span>
+          <span class="achievementStatsText">25/50</span>
+          <svg viewBox="0 0 36 36" class="circle-svg achieveCircle">
+             <path class="around"
+                stroke-dasharray="100, 100"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+             <path class="percent" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+          </svg>
+        </div> -->
+
+        <div class="pageLine"></div>
+        <br>
+        <div class="pageHeading">Completed</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Look back at the ones you've completed. How impressive!</div>
+        <a style="display: none" id="completedINsetLOLOL"></a>
+
+        <br><br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright FUSION ©2024</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="section" id="playedgames" style="display: none">
+        <br>
+        <div class="title">Haven't Played Games</div>
+        <div class="text">You haven't played these games yet! Maybe you should ツ <b>Scroll to the bottom to view played ones.</b></div>
+        <div class="blogBack" onclick="loadProfile(), document.getElementById('mainProfile').style.display = 'block', document.getElementById('playedgames').style.display = 'none'">
+            <i class='bx bx-chevron-left icon' ></i>
+            <span class="hovertext7">Back</span>
+        </div>
+        <br>
+        <div style="width: 90%; margin: auto; position: relative; text-align: left" id="notplayedContainer">
+        </div>
+        <br><br>
+
+        <div class="pageLine"></div>
+        <br>
+        <div class="pageHeading">Played Games</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">So far you've played these games. Nice!</div>
+        <div style="width: 90%; margin: auto; position: relative; text-align: left" id="playedContainer">
+        </div>
+
+        <br><br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright FUSION ©2024 </span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
+        <div class="alerts" id="alerts">
+        </div>
+    </section>
+
+    <!-- <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe> -->
+
+    <script src="script.js"></script>
+    <!-- <script src="./Scripts/connection.js"></script> -->
+    <script src="Scripts/settings.js"></script>
+    <script src="Scripts/game_data.js"></script>
+    <script src="Scripts/profile.js"></script>
+    <script src="Scripts/hotkeys.js"></script>
+    <script src="Scripts/sitelock.js"></script>
+    <script src="Scripts/verified.js"></script>
+    <script src="Scripts/springs.js"></script>
+    <script src="Scripts/82224.js"></script>
+    <script src="Scripts/panther.js"></script>
+        <script src="Scripts/effect.js"></script>
+
+</body>
+
+</html>

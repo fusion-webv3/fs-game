@@ -1,0 +1,223 @@
+.game-link {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-link img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.game-link:hover {
+    transform: scale(1.1);
+    color: #3498db;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-left: 80px;
+    width: calc(100% - 80px);
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.game-link {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #ecf0f1; /* Light Grey */
+}
+
+.game-link img {
+    width: 200px; /* Adjust the width based on your design */
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+
+*{
+    margin:0;
+}
+html{
+    scroll-behavior:smooth 
+}
+body{
+    font-family:montserrat,sans-serif;
+    color:var(--text-color);
+    background-color: 1d1d1d;
+    position:middle;
+    background-image: url('../game-assets/site-images/tgcwave.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+::-webkit-scrollbar {
+    width: .4vw;
+    height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background: #171717;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #444, #333);
+    border-radius:8px;
+}
+.navlogo {
+    height: 1.9vw;
+    margin-left: 25px;
+}
+.tgcnavbar {
+    height: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.navbuttons {
+    display: flex;
+    justify-content: left;
+    height: 100%;
+    align-items: center;
+    gap: 1px;
+}
+#clock {
+    position: absolute;
+    right: 15px;
+    user-select: none;
+    transition: transform 0.5s;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    padding: 10px 8px;
+}
+.navbutton {
+    padding: 10px 8px;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.navbutton:hover {
+    color: #616161;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(224, 224, 224);
+}
+.title {
+    font-size:3.6vw;
+    font-weight:700;
+    text-transform:uppercase;
+    color:var(--text-color);
+    z-index:1;
+    text-align: center;
+    letter-spacing: 0.25vw;
+    line-height:5.8vw 
+}
+.paragraph {
+    font-size: 2.2vw;
+    text-align: center;
+    margin-bottom: 1.7vw;
+    color: gray;
+    font-weight: 600;
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0 
+   }
+    100%{
+        opacity:1 
+   }
+}
+.game{
+    display:flex;
+    padding:1vw;
+    background-color: var(--sidebar-color);
+    width:46vw;
+    margin-top: 2vw;
+    margin-left: 26vw;
+    transition: .5s;
+    border-radius:10px;
+    overflow:hidden 
+}
+.game:hover{
+    outline: .3vw solid #8668FF;
+}
+.game #game-content{
+    margin: 1vw;
+}
+.game h1{
+    font-size:2.3vw;
+    font-weight:700;
+    margin-top: -.76vw 
+}
+.by{
+    font-size:1vw;
+    width:30vw;
+    font-weight:700
+}
+.game .gameicon{
+    height:10vw;
+    width:10vw;
+    border-radius:10px;
+}
+.game #game-content button{
+    background: linear-gradient(45deg, #949292, #616161);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size:1.5vw;
+    font-weight:600;
+    padding:.5vw 3vw;
+    margin-top:1vw;
+    cursor:pointer;
+    transition:.2s;
+    margin-left:auto;
+    user-select:none;
+    font-family:montserrat,sans-serif;
+    transition: 0.3s ease-in-out;
+    border: 0;
+}
+.game #game-content button:hover{
+    background: linear-gradient(45deg, #616161, #949292);
+}
+.game #game-content button:active{
+    transform: scaleX(.9) scaleY(.9);
+}
+.record {
+    font-size:2vw;
+    width:30vw;
+    font-weight:700
+}
+.date {
+    font-size:1vw;
+    width:30vw;
+    opacity: .67;
+    font-weight:700
+}
+.submit {
+    text-align: center;
+    color: #8668FF;
+}
+.ps {
+    text-align: center;
+    color: red;
+}

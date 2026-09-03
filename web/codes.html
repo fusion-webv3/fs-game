@@ -1,0 +1,404 @@
+<!--
+⢰⠒⠒⠒⠒⠋⠛⠉⠉⣷⡎⠉⠉⢹⣦⠀⢸⡁⠈⢹⣧⡠⠚⠉⠀⠀⠀⠈⠑⢦⡄⣿⠀⠀⢹⣧⢀⡴⠊⠉⠀⠀⠈⠓⢤⣄⠀⣾⠉⠉⠑⣦⡀⠀⣶⠒⠒⣦⡀
+⢸⡀⠀⠀⣤⣤⣤⣶⣶⣿⡇⠀⠀⢸⣿⠀⢸⠀⠀⢸⣿⡇⠀⠀⢾⣿⣿⣦⣾⣿⠏⡇⠀⠀⢸⣿⡏⠀⠀⣰⣶⣶⡦⠀⠀⢻⣧⡏⠀⠀⠀⠘⢿⣄⣿⠀⢀⣿⡇
+⠸⡇⠀⠀⠛⠛⠛⢻⣍⠁⡇⠀⠀⢸⣿⡀⢸⡇⠀⢸⣿⢧⡀⠀⠀⠀⠉⠉⠙⢦⣄⡇⠀⠀⢸⣿⠀⠀⠀⣿⡏⠀⢠⠀⠀⠀⣿⡇⠀⠀⡀⠀⠈⢻⣿⠀⢸⣿⡇
+⠀⡇⠀⠀⢠⣤⣤⣼⣿⠀⣧⠀⠀⢸⣿⡇⢸⡇⠀⢸⣿⢈⣻⣶⣶⣦⣤⠀⠀⠈⣿⡇⠀⠀⢸⣿⡀⠀⠀⣿⡇⠀⣤⠀⠀⢀⣿⣧⠀⠀⣿⣄⠀⠀⠀⠀⢸⣿⠁
+⠀⡇⠀⠀⢸⣿⠋⠉⠁⠀⠹⡂⠀⠀⠙⠓⠋⠁⢀⣼⣿⡉⠀⠉⠓⠛⠋⠀⠀⣰⣿⡟⠀⠀⢸⣿⢣⡀⠀⠈⠛⠚⠁⠀⣠⣾⣿⣿⠀⢰⣿⠛⣦⠀⠀⠀⢸⣿⠀
+⠀⣧⣀⣀⣸⣿⠀⠀⠀⠀⠀⠙⢶⣤⣤⣤⣤⣴⣿⡿⠃⠙⢷⣦⣤⣤⣤⣶⣿⡿⠋⢧⣤⣤⣾⡿⠈⠻⢶⣤⣤⣤⣤⣾⣿⠟⠑⣿⣤⣼⣿⠀⠈⢷⣀⣀⣸⣿⠀
+⠀⠈⠛⠛⠛⠉⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠙⠛⠛⠃⠀
+⠀⠀⢀⡤⠒⠋⠉⠉⠒⠢⣄⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⡠⠤⣄⠀⡠⠖⠋⠉⠉⠉⠑⣦⡄⠀⠀
+⠀⢠⠋⠀⠀⢠⣴⣦⡀⠀⠈⣿⡄⠀⠀⡸⠁⠀⠀⠉⣷⡄⠀⢠⠉⠉⠉⠉⠙⣦⡀⣰⠉⠉⠉⠉⢹⣾⠉⠁⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⣠⣶⣶⣦⣼⣿⠇⠀⠀
+⠀⡏⠀⠀⠀⣿⣟⣉⠣⣤⣤⣼⡷⠀⡰⠃⠀⡀⠀⠀⢸⣧⠀⢸⠀⠀⠀⠀⠀⢹⣧⠃⠀⠀⠀⠀⢸⣿⠀⠀⠀⢦⣾⣿⣿⠿⠟⢇⠀⠀⠈⠉⠉⠉⠉⠓⢤⡀⠀
+⠀⡇⠀⠀⢸⣿⡇⠈⠉⠉⠉⣿⡄⢰⠃⠀⢰⣿⡀⠀⠈⣿⡄⠀⠀⠀⢰⡀⠀⠀⢿⠀⠀⡆⠀⠀⢸⣿⡇⠀⠀⠈⠁⠀⢸⣷⠀⠈⢷⣤⣄⣀⣀⣀⠀⠀⠈⣿⡄
+⠀⠹⡄⠀⠀⠻⠿⠟⠀⠀⢀⣿⣷⠃⠀⠀⠈⠉⠁⠀⠀⢸⣧⠀⠀⠀⢸⣧⠀⠀⠀⠀⣼⡇⠀⠀⢸⣿⡇⠀⠀⢰⣲⣶⣾⣿⣀⡀⡴⠋⠛⠿⠿⠛⠀⠀⣠⣿⠇
+⠀⠀⠙⢶⣤⣀⣀⣠⣴⡀⢸⣿⠇⠀⢀⣖⣦⣤⣤⠀⠀⠈⣿⣄⠀⠀⠀⣿⡆⠀⠀⢠⣿⡇⠀⠀⢸⣿⡇⠀⠀⠈⠉⠁⠀⠀⠀⣿⣶⣤⣀⣀⣀⣠⣤⣾⡿⠏⠀
+⠀⠀⠀⠀⠉⠙⠛⠛⠋⠛⠿⠛⢶⣶⣾⡿⠁⠀⠈⢦⣤⣤⣼⣿⣄⣀⣠⣿⠹⣄⣀⣾⡿⢧⣀⣀⣼⣿⠰⣤⣤⣤⣴⣶⣶⣶⣿⡿⠃⠉⠙⠛⠛⠛⠋⠁
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVC107F1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5TVC107F1V');
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4196177780480181"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="google-adsense-account" content="ca-pub-4196177780480181">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
+    <link rel="stylesheet" href="board.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+
+
+
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #content {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #codeInput {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #695CFE;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4736fc;
+        }
+
+        #resultMessage {
+            margin-top: 10px;
+        }
+
+        #messageContainer {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='../unpkg.com/boxicons%402.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>FUSION</title>
+    <link rel="icon" herf="sgs-logo.png" type="image/png">
+</head>
+<body>
+    <div class="bodyOverlay"></div>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loadingMessage" id="loadingMessage"></span>
+    </div>
+
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText"></span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('index.html')">
+                    <span class="horText horSelected">Home</span>
+                </div>
+                <div class="horPage" onclick="location.replace('games.html')">
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage" onclick="location.replace('chat.html')">
+                    <span class="horText">Chat</span>
+                </div>
+
+                <div class="horPage" onclick="location.replace('form.html')">
+                    <span class="horText">Request</span>
+                </div>
+
+                       <div class="horPage" onclick="location.replace('prx.html')">
+                    <span class="horText">AI</span>
+                </div>
+                
+               <div class="horPage" onclick="location.replace('leaderboard.html')">
+                    <span class="horText">Leaderboard</span>
+                </div>
+
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <span class="horText">More</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                        </button>
+                    </div>
+                </div>
+                <div class="horPage" onclick="location.replace('settings.html')">
+                    <span class="horText">Settings</span>
+                </div>
+                <div class="horPage" onclick="location.replace('profile.html')">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
+        <header>
+
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">FUSION</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='games.html'>
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='chat.html'>
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href='form.html'>
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Request</span>
+                            <span class="hovertext">Request</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">                
+                    <a href='prx.html'>
+                            <i class='bx bx-chip icon' ></i>
+                            <span class="text nav-text">AI</span>
+                            <span class="hovertext">AI</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href='leaderboard.html'>
+                            <i class='bx bx-trophy icon' ></i>
+                            <span class="text nav-text">Leaderboard</span>
+                            <span class="hovertext">Leaderboard</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link" id="altLinks">
+                        <a href="#" onclick="optionsMenu('linkOptions')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">More</span>
+                            <span class="hovertext">More</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
+                                <button onclick="window.location.href = 'emulator'" class="dropbtn" id="altLinks">Emulator</button>
+                                </button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link">
+                        <a href='settings.html'>
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <a href='profile.html'>
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+
+    <br>
+    <br>
+
+
+
+
+    <div id="messageContainer"></div>
+
+
+    <h1>Redeem Codes</h1>
+
+    <form id="codeRedemptionForm">
+        <label for="codeInput">Enter your Code:</label>
+        <input  type="text" id="codeInput" name="code" required>
+        <button type="button" onclick="redeemCode()">Redeem</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--<h1>Solve The riddle get 2m XP</h1>
+
+    <p>I am a sound that's soft and light,
+        But can travel through the night.
+        I may be gentle, but beware,
+        For secrets I can easily share.
+        
+        What am I that's so sly and sly,
+        That can be heard but never seen with the eye?</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <P>
+            (Enter the answer to the riddle into the code bar to claim your XP)
+        </P>-->
+
+
+
+  
+
+
+
+
+
+ 
+
+
+
+
+
+</footer>
+
+<script>
+  function loadPage(url) {
+      window.location.href = url;
+  }
+</script>
+    </section>
+
+    <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
+        <div class="alerts" id="alerts">
+        </div>
+    </section>
+
+
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
+     <script>
+        document.addEventListener('keydown', function (e) {
+            // Check if Ctrl+C is pressed
+            if (e.ctrlKey && e.key === 'c') {
+                e.preventDefault(); // Prevent the default action
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+    <script src="Scripts/settings.js"></script>
+    <script src="Scripts/hotkeys.js"></script>
+    <script src="Scripts/sitelock.js"></script>
+    <script src="Scripts/codes.js"></script>
+    <script src="Scripts/profile.js"></script>
+    <script src="Scripts/snow.js"></script>
+
+</body>
+
+</html>
+
